@@ -24,3 +24,12 @@ const sumOfFourAndSix = () => {
 }
 // console.log(sumOfFourAndSix());
 
+// p2 ?
+const oddAndEvenToN = (n) => {
+	for (let v = 0; v <= n; v++) {
+		if (v % 2 === 0) console.log(`${v} is even`);
+		else console.log(`${v} is odd`);
+	}
+}
+// oddAndEvenToN(5);
+
