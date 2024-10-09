@@ -95,5 +95,13 @@ const multiplesOfFourAndSix = () => {
 	for (let i = 1; i <= 100; i++) if (i % 4 === 0 && i % 6 === 0) a.push(i);
 	return a;
 }
-console.log(multiplesOfFourAndSix());
+// console.log(multiplesOfFourAndSix());
+
+// b2
+const countMultiplesOfTwo = (a) => {
+	let c = 0;
+	for (let i = 0; i < a.length; i++) if (a[i] % 2 === 0) c++;
+	return c;
+}
+// console.log(countMultiplesOfTwo([2,4,5]));
 
