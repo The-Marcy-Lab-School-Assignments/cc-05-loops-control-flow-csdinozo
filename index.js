@@ -83,7 +83,17 @@ const greaterNumFour = (numOne, numTwo, numThree, numFour) => {
 	}
 	return numFour;
 }
-console.log(greaterNumFour(10, 7, 16, 80)) //returns 80
-console.log(greaterNumFour(1.14, 1.14, 5, 7)) //returns "two integers are equal"
-console.log(greaterNumFour(1.14, 1.14, 1.14, 7)) //returns "three integers are equal"
-console.log(greaterNumFour("21", 21, 60, 3)) //returns null
+// console.log(greaterNumFour(10, 7, 16, 80)) //returns 80
+// console.log(greaterNumFour(1.14, 1.14, 5, 7)) //returns "two integers are equal"
+// console.log(greaterNumFour(1.14, 1.14, 1.14, 7)) //returns "three integers are equal"
+// console.log(greaterNumFour("21", 21, 60, 3)) //returns null
+
+// b1
+const multiplesOfFourAndSix = () => {
+	let a = [];
+	// inclusive?
+	for (let i = 1; i <= 100; i++) if (i % 4 === 0 && i % 6 === 0) a.push(i);
+	return a;
+}
+console.log(multiplesOfFourAndSix());
+
