@@ -39,5 +39,51 @@ const sumOfNotDivisibleByTen = () => {
 	for (let n = 1; n <= 1000; n++) if (n % 10 !== 0) sum += n;
 	return sum;
 }
-console.log(sumOfNotDivisibleByTen());
+// console.log(sumOfNotDivisibleByTen());
 
+// p4
+const greaterNumFour = (numOne, numTwo, numThree, numFour) => {
+	// usage of 'integers' was somewhat misleading --- replaced !Number.isInteger() with type of !== 'number'
+	if (typeof numOne !== 'number' || typeof numTwo !== 'number' || typeof numThree !== 'number' || typeof numFour !== 'number') return null;
+	if (numOne === numTwo && numTwo === numThree && numThree === numFour) return "all integers are equal";
+	if (numOne >= numTwo) {
+		if (numOne === numTwo) {
+			if (numTwo === numThree || numTwo === numFour) return "three integers are equal";
+			return "two integers are equal";
+		}
+		else if (numTwo === numThree || numTwo === numFour) {
+			if (numTwo === numThree && numThree === numFour) return "three integers are equal";
+			return "two integers are equal";
+		}
+
+		if (numOne >= numThree) {
+			if (numOne === numThree) {
+				if (numThree === numFour) return "three integers are equal";
+				return "two integers are equal";
+			}
+			else if (numOne === numFour) return "two integers are equal";
+			
+			if (numFour > numOne) return numFour;
+			return numOne;
+		}
+	}
+	else if (numTwo >= numThree) {
+		if (numTwo === numThree) {
+			if (numThree === numFour) return "three integers are equal";
+			return "two integers are equal";
+		}
+		else if (numTwo === numFour) return "two integers are equal";
+
+		if (numFour > numTwo) return numFour;
+		return numTwo;
+	}
+	else if (numThree >= numFour) {
+		if (numThree === numFour) return "two integers are equal";
+		return numThree;
+	}
+	return numFour;
+}
+console.log(greaterNumFour(10, 7, 16, 80)) //returns 80
+console.log(greaterNumFour(1.14, 1.14, 5, 7)) //returns "two integers are equal"
+console.log(greaterNumFour(1.14, 1.14, 1.14, 7)) //returns "three integers are equal"
+console.log(greaterNumFour("21", 21, 60, 3)) //returns null
