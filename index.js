@@ -33,3 +33,11 @@ const oddAndEvenToN = (n) => {
 }
 // oddAndEvenToN(5);
 
+// p3
+const sumOfNotDivisibleByTen = () => {
+	let sum = 0;
+	for (let n = 1; n <= 1000; n++) if (n % 10 !== 0) sum += n;
+	return sum;
+}
+console.log(sumOfNotDivisibleByTen());
+
