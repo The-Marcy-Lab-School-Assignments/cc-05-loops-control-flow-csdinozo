@@ -16,3 +16,11 @@ const greaterNum = (numOne, numTwo) => {
 // console.log(greaterNum(1,2));
 // console.log(greaterNum(2,1));
 
+// p1 ?
+const sumOfFourAndSix = () => {
+	let sum = 0;
+	for (let n = 1; n <= 1000; n++) if (n % 4 === 0 && n % 6 === 0) sum += n;
+	return sum;
+}
+// console.log(sumOfFourAndSix());
+
